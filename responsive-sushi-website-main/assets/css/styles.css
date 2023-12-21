@@ -906,7 +906,7 @@ body.dark-theme {
   }
 
   .nav {
-    height: calc(var(--header-height) + 3rem);
+    height: calc(var(--header-height) + 2.25rem);
   }
 
   .home__container {
