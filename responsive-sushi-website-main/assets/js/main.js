@@ -44,7 +44,25 @@ const scrollup=()=>{
 window.addEventListener('scroll',scrollup)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections=document.querySelectorAll('section[id]')
 
+const scrollActive=()=>{
+  const scrollY=window.pageYOffset
+
+  sections.forEach(current=>{
+    const sectionHeight=current.offsetHeight,
+    sectionTop=current.offsetHeight-58,
+    sectionId=current.getAttribute('id'),
+    sectionClass=document.querySelectorAll('.nav__menu a[href*='+sectionId+']')
+
+    if(scrollY>sectionTop && scrollY<=sectionTop+sectionHeight){
+      sectionClass.classList.add('active-link')
+    }
+    else{
+      sectionClass.classList.remove('active-link')
+    }
+  })
+}
 
 /*=============== DARK LIGHT THEME ===============*/ 
 
