@@ -3,8 +3,19 @@
 /*=============== REMOVE MENU MOBILE ===============*/
 
 /*=============== CHANGE BACKGROUND HEADER ===============*/
+<<<<<<< HEAD
 
 /*=============== SHOW SCROLL UP ===============*/
+=======
+const scrollHeader=()=>{
+    const header = document.getElementById('header');
+    this.scrollY >=50?header.classList.add('bg-header'):header.classList.remove('bg-header')
+}
+window.addEventListener('scroll',scrollHeader)
+
+/*=============== SHOW SCROLL UP ===============*/ 
+
+>>>>>>> origin/main
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 

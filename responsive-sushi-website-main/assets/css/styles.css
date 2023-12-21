@@ -3,18 +3,19 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
+--header-height: 3.5rem;
 
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(19, 64%, 54%);
-  --first-color-alt: hsl(19, 64%, 52%);
-  --title-color: hsl(19, 16%, 15%);
-  --text-color: hsl(19, 16%, 35%);
-  --text-color-light: hsl(19, 8%, 55%);
-  --body-color: hsl(19, 100%, 96%);
-  --container-color: hsl(19, 100%, 97%);
+/*========== Colors ==========*/
+/*Color mode HSL(hue, saturation, lightness)*/
+--first-color: hsl(19, 64%, 54%);
+--first-color-alt: hsl(19, 64%, 52%);
+--title-color: hsl(19, 16%, 15%);
+--text-color: hsl(19, 16%, 35%);
+--text-color-light: hsl(19, 8%, 55%);
+--body-color: hsl(19, 100%, 96%);
+--container-color: hsl(19, 100%, 97%);
 
+<<<<<<< HEAD
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
@@ -27,16 +28,31 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
+=======
+/*========== Font and typography ==========*/
+/*.5rem = 8px | 1rem = 16px ...*/
+--body-font: "Poppins", sans-serif;
+--title-font: "Lora", serif;
+--subtitle-font: "Dancing Script", cursive;
+--biggest-font-size: 2.25rem;
+--h1-font-size: 1.5rem;
+--h2-font-size: 1.25rem;
+--h3-font-size: 1rem;
+--normal-font-size: .938rem;
+--small-font-size: .813rem;
+--smaller-font-size: .75rem;
+>>>>>>> origin/main
 
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
+/*========== Font weight ==========*/
+--font-medium: 500;
+--font-semi-bold: 600;
 
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
+/*========== z index ==========*/
+--z-tooltip: 10;
+--z-fixed: 100;
 }
 @media screen and (min-width: 1024px) {
+<<<<<<< HEAD
   :root {
     --biggest-font-size: 4rem;
     --h1-font-size: 2.25rem;
@@ -46,45 +62,62 @@
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
   }
+=======
+:root {
+  --biggest-font-size: 4rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+}
+>>>>>>> origin/main
 }
 
 /*=============== BASE ===============*/
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+box-sizing: border-box;
+padding: 0;
+margin: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-  transition: background 0.4s; /* for dark mode animation */
+font-family: var(--body-font);
+font-size: var(--normal-font-size);
+background-color: var(--body-color);
+color: var(--text-color);
+transition: background 0.4s; /* for dark mode animation */
 }
 
+<<<<<<< HEAD
 h1,
 h2,
 h3 {
   color: var(--title-color);
   font-weight: var(--font-medium);
+=======
+h1, h2, h3 {
+color: var(--title-color);
+font-weight: var(--font-medium);
+>>>>>>> origin/main
 }
 
 ul {
-  list-style: none;
+list-style: none;
 }
 
 a {
-  text-decoration: none;
+text-decoration: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+max-width: 100%;
+height: auto;
 }
 
 /*=============== THEME ===============*/
@@ -112,8 +145,8 @@ body.dark-theme {
 }
 
 /*========== 
-    Color changes in some parts of 
-    the website, in light theme
+  Color changes in some parts of 
+  the website, in light theme
 ==========*/
 .dark-theme .bg-header,
 .dark-theme .nav__menu,
@@ -143,40 +176,40 @@ body.dark-theme {
 }
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1024px;
-  margin-inline: 1.5rem;
+max-width: 1024px;
+margin-inline: 1.5rem;
 }
 
 .grid {
-  display: grid;
-  gap: 1.5rem;
+display: grid;
+gap: 1.5rem;
 }
 
 .section {
-  padding-block: 5rem 1rem;
+padding-block: 5rem 1rem;
 }
 
 .section__title {
-  font-size: var(--h1-font-size);
-  font-family: var(--title-font);
-  margin-bottom: 1.5rem;
+font-size: var(--h1-font-size);
+font-family: var(--title-font);
+margin-bottom: 1.5rem;
 }
 
 .section__subtitle {
-  display: block;
-  font-size: var(--h2-font-size);
-  font-family: var(--subtitle-font);
-  color: var(--first-color);
-  margin-bottom: 0.5rem;
+display: block;
+font-size: var(--h2-font-size);
+font-family: var(--subtitle-font);
+color: var(--first-color);
+margin-bottom: 0.5rem;
 }
 
 .section__title,
 .section__subtitle {
-  text-align: center;
+text-align: center;
 }
 
 .main {
-  overflow: hidden; /* For animation ScrollReveal */
+overflow: hidden; /* For animation ScrollReveal */
 }
 
 /*=============== HEADER & NAV ===============*/
@@ -184,22 +217,204 @@ body.dark-theme {
 /* Show menu */
 
 /* Change background header */
+<<<<<<< HEAD
+=======
+.bg-header{
+box-shadow: 0 2px 8px hsla(19, 64%, 24%, 0.1);
+}
+>>>>>>> origin/main
 
 /* Active link */
 
 /*=============== HOME ===============*/
 
 /*=============== BUTTON ===============*/
+.button{
+display: inline-flex;
+align-items: center;
+column-gap: .5rem;
+background-color: var(--first-color);
+padding: 1rem 1.5rem;
+border-radius: 4rem;
+color: #fff;
+font-weight: var(--font-medium);
+transition: background .3s;
+}
 
+<<<<<<< HEAD
+=======
+.button i{
+font-size: 1.5rem;
+transition: transform 0.3s;
+}
+.button:hover{
+background-color: var(--first-color-alt);
+}
+.button:hover i{
+transform: translateX(.25rem);
+}
+
+>>>>>>> origin/main
 /*=============== ABOUT ===============*/
+.about{
+position: relative;
+}
+.about__container{
+row-gap: 3rem;
+}
+.about__data{
+text-align: center;
+}
+.about__title img{
+width: 30px;
+}
 
+<<<<<<< HEAD
 /*=============== POPULAR ===============*/
 .popular__card {
   transition: background 0.4s; /* for dark mode animation */
+=======
+.about__title div{
+display: flex;
+justify-content: center;
+align-items: center;
+column-gap: .5rem;
+}
+
+.about__img{
+width: 300px;
+justify-content: center;
+}
+
+.about__leaf{
+width: 100px;
+opacity: .2;
+position: absolute;
+right: -1.5rem;
+bottom: 11rem;
+transform: rotate(-15deg);
+}
+/*=============== POPULAR ===============*/
+.popular__container{
+  padding-top: 4rem;
+  grid-template-columns: 250px;
+  justify-content: center;
+  row-gap: 5.5rem;
+}
+.popular__card{
+  position: relative;
+  background-color: var(--container-color);
+  padding: 7rem 2rem 1.5rem ;
+  box-shadow: 0 8px 20px hsla(19, 64%, 48%, 0.8);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.popular__img{
+  width: 220px;
+  position: absolute;
+  inset: 0;
+  top: -2.5rem;
+  margin: 0 auto;
+  transition: transform 0.4s;
+}
+
+.popular__name{
+  font-size: var(--h3-font-size);
+  font-family: var(--title-font);
+  margin-bottom: 0.25rem;
+}
+
+.popular__description{
+  display: block;
+  font-size: var(--smaller-font-size);
+  margin-bottom: 1rem;
+}
+
+.popular__price{
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+}
+
+.popular__button{
+  display: flex;
+  background-color: var(--first-color);
+  padding: 6px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.25rem;
+  box-shadow: 0 4px 20px hsla(19, 64%, 20%, 0.2);
+  position: absolute;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.popular__button:hover{
+  background-color: var(--first-color-alt);
+}
+
+.popular__card:hover .popular__img{
+  transform: translateY(-.25rem);
+>>>>>>> origin/main
 }
 
 /*=============== RECENTLY ===============*/
+.recently{
+  position: relative;
+}
 
+<<<<<<< HEAD
+=======
+.recently__container{
+  row-gap: 4rem;
+}
+
+.recently__data{
+  position: relative;
+  text-align: center;
+}
+
+.recently__description{
+  margin-bottom: 2rem;
+}
+
+.recently__data-img{
+  width: 25px;
+  position: absolute;
+  top: 3.5rem;
+  right: 1.5rem;
+  transform: rotate(30deg);
+}
+
+.recently__img{
+  width: 300px;
+  justify-self: center;
+}
+
+.recently__leaf-1,.recently__leaf-2{
+  position: absolute;
+  opacity: 0.2;
+}
+.recently__leaf-1{
+  width: 80px;
+  top: 17rem;
+  left: -1rem;
+  transform: rotate(15deg);
+}
+
+.recently__leaf-2{
+  width: 40px;
+  right: -1rem;
+  bottom: 12rem;
+  transform: rotate(-30deg);
+}
+
+>>>>>>> origin/main
 /*=============== NEWSLETTER ===============*/
 .newsletter__container,
 .newsletter__form,
