@@ -6,7 +6,7 @@ import Category from "./components/Category/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import Newsletter from "./components/Footer/Newsletter/Newsletter";
 import AppContext from "./utils/context";
-
+// This is a comment
 function App() {
   return <div>App</div>;
 }
