@@ -15,6 +15,20 @@
 --body-color: hsl(19, 100%, 96%);
 --container-color: hsl(19, 100%, 97%);
 
+<<<<<<< HEAD
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --title-font: "Lora", serif;
+  --subtitle-font: "Dancing Script", cursive;
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+=======
 /*========== Font and typography ==========*/
 /*.5rem = 8px | 1rem = 16px ...*/
 --body-font: "Poppins", sans-serif;
@@ -27,6 +41,7 @@
 --normal-font-size: .938rem;
 --small-font-size: .813rem;
 --smaller-font-size: .75rem;
+>>>>>>> origin/main
 
 /*========== Font weight ==========*/
 --font-medium: 500;
@@ -37,6 +52,17 @@
 --z-fixed: 100;
 }
 @media screen and (min-width: 1024px) {
+<<<<<<< HEAD
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+=======
 :root {
   --biggest-font-size: 4rem;
   --h1-font-size: 2.25rem;
@@ -46,6 +72,7 @@
   --small-font-size: .875rem;
   --smaller-font-size: .813rem;
 }
+>>>>>>> origin/main
 }
 
 /*=============== BASE ===============*/
@@ -67,9 +94,17 @@ color: var(--text-color);
 transition: background 0.4s; /* for dark mode animation */
 }
 
+<<<<<<< HEAD
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+=======
 h1, h2, h3 {
 color: var(--title-color);
 font-weight: var(--font-medium);
+>>>>>>> origin/main
 }
 
 ul {
@@ -86,17 +121,59 @@ height: auto;
 }
 
 /*=============== THEME ===============*/
+.nav__buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
 
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color 0.3s;
+}
 
 /*========== Variables Dark theme ==========*/
-
+body.dark-theme {
+  --first-color: hsl(19, 64%, 58%);
+  --first-color-alt: hsl(19, 64%, 54%);
+  --title-color: hsl(19, 24%, 85%);
+  --text-color: hsl(19, 16%, 65%);
+  --body-color: hsl(19, 12%, 8%);
+  --container-color: hsl(19, 10%, 10%);
+}
 
 /*========== 
   Color changes in some parts of 
   the website, in light theme
 ==========*/
+.dark-theme .bg-header,
+.dark-theme .nav__menu,
+.dark-theme .scrollup {
+  box-shadow: 0 2px 8px hsla(19, 64%, 4%, 0.5);
+}
 
+.dark-theme .popular__card {
+  box-shadow: 0 8px 20px hsla(19, 64%, 4%, 0.2);
+}
 
+.dark-theme .newsletter__content {
+  background-color: var(--container-color);
+}
+
+.dark-theme .newsletter__form,
+.dark-theme .newsletter__input {
+  background-color: var(--body-color);
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(19, 8%, 15%);
+}
+
+.dark-theme::-webkit-slider-thumb:hover {
+  background-color: hsl(19, 8%, 35%);
+}
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
 max-width: 1024px;
@@ -126,7 +203,7 @@ color: var(--first-color);
 margin-bottom: 0.5rem;
 }
 
-.section__title, 
+.section__title,
 .section__subtitle {
 text-align: center;
 }
@@ -137,20 +214,19 @@ overflow: hidden; /* For animation ScrollReveal */
 
 /*=============== HEADER & NAV ===============*/
 
-
 /* Show menu */
 
-
 /* Change background header */
+<<<<<<< HEAD
+=======
 .bg-header{
 box-shadow: 0 2px 8px hsla(19, 64%, 24%, 0.1);
 }
+>>>>>>> origin/main
 
 /* Active link */
 
-
 /*=============== HOME ===============*/
-
 
 /*=============== BUTTON ===============*/
 .button{
@@ -165,6 +241,8 @@ font-weight: var(--font-medium);
 transition: background .3s;
 }
 
+<<<<<<< HEAD
+=======
 .button i{
 font-size: 1.5rem;
 transition: transform 0.3s;
@@ -176,6 +254,7 @@ background-color: var(--first-color-alt);
 transform: translateX(.25rem);
 }
 
+>>>>>>> origin/main
 /*=============== ABOUT ===============*/
 .about{
 position: relative;
@@ -190,6 +269,11 @@ text-align: center;
 width: 30px;
 }
 
+<<<<<<< HEAD
+/*=============== POPULAR ===============*/
+.popular__card {
+  transition: background 0.4s; /* for dark mode animation */
+=======
 .about__title div{
 display: flex;
 justify-content: center;
@@ -276,6 +360,7 @@ transform: rotate(-15deg);
 
 .popular__card:hover .popular__img{
   transform: translateY(-.25rem);
+>>>>>>> origin/main
 }
 
 /*=============== RECENTLY ===============*/
@@ -283,6 +368,8 @@ transform: rotate(-15deg);
   position: relative;
 }
 
+<<<<<<< HEAD
+=======
 .recently__container{
   row-gap: 4rem;
 }
@@ -327,11 +414,14 @@ transform: rotate(-15deg);
   transform: rotate(-30deg);
 }
 
+>>>>>>> origin/main
 /*=============== NEWSLETTER ===============*/
-
-
+.newsletter__container,
+.newsletter__form,
+.newsletter__input {
+  transition: background 0.4s; /* for dark mode animation */
+}
 /*=============== FOOTER ===============*/
-
 
 /*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar{
@@ -340,6 +430,7 @@ transform: rotate(-15deg);
   background-color: hsl(19, 8%, 75%);  
 }
 
+<<<<<<< HEAD
 ::-webkit-scrollbar-thumb{
   border-radius: 0.5rem;
   background-color: hsl(19, 8%, 65%);  
@@ -348,6 +439,8 @@ transform: rotate(-15deg);
 ::-webkit-scrollbar-thumb:hover{
   background-color: hsl(19, 8%, 55%);  
 }
+=======
+>>>>>>> 3460f2796f16f496d69ef3b0f4a0a61afb5ba144
 /*=============== SCROLL UP ===============*/
 .scrollup{
   position: fixed;
@@ -364,6 +457,7 @@ transform: rotate(-15deg);
   transition: bottom .3s transform .3s, background .4s;
 }
 
+<<<<<<< HEAD
 .scrollup:hover{
   transform: translateY(-.25rem);
 }
@@ -373,11 +467,311 @@ transform: rotate(-15deg);
   bottom: 3rem;
 }
 
+=======
+/* Show Scroll Up*/
+
+>>>>>>> 3460f2796f16f496d69ef3b0f4a0a61afb5ba144
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
 
+  .section {
+    padding-block: 4rem 1rem;
+  }
+
+  .home__title {
+    font-size: 2rem;
+  }
+  .home__leaf-1 {
+    top: 5rem;
+  }
+  .home__leaf-2 {
+    bottom: 0;
+  }
+
+  .about__leaf {
+    bottom: 8rem;
+  }
+
+  .recently__data-img {
+    right: 0.5rem;
+  }
+
+  .newsletter__content {
+    padding: 6rem 1rem 2rem;
+  }
+  .newsletter__form {
+    flex-direction: column;
+    background: none;
+    row-gap: 1rem;
+  }
+  .newsletter__input {
+    width: initial;
+    padding: 1rem;
+    border-radius: 4rem;
+  }
+  .newsletter__buttons {
+    justify-content: center;
+  }
+
+  .footer__content {
+    gap: 1.5rem;
+  }
+}
 
 /* For medium devices */
+@media screen and (min-width: 576px) {
+  .home__container,
+  .about__container,
+  .recently__container,
+  .newsletter__content {
+    grid-template-columns: 0.7fr;
+    justify-content: center;
+  }
 
+  .footer__content {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
 
+@media screen and (min-width: 768px) {
+  .nav {
+    column-gap: 3rem;
+  }
+
+  .nav__toggle,
+  .nav__close,
+  .nav__img-1,
+  .nav__img-2 {
+    display: none;
+  }
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .nav__menu {
+    margin-left: auto;
+  }
+
+  .dark-theme .nav__menu {
+    box-shadow: none;
+  }
+
+  .popular__container {
+    grid-template-columns: repeat(2, 250px);
+  }
+
+  .footer__content {
+    grid-template-columns: repeat(4, max-content);
+  }
+}
 /* For large devices */
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding-block: 7rem 1.5rem;
+  }
+  .section__subtitle {
+    margin-bottom: 0.75rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5 rem);
+  }
+
+  .home__container {
+    position: relative;
+    grid-template-columns: 480px 500px;
+    padding-block: 7rem 3rem;
+  }
+  .home__data {
+    text-align: initial;
+    order: -1;
+  }
+  .home__title img {
+    width: 60px;
+  }
+  .home__title div {
+    justify-content: initial;
+    column-gap: 1rem;
+  }
+  .home__description {
+    padding-inline: 0 10rem;
+  }
+  .home__img {
+    width: 600px;
+    position: absolute;
+    top: 5rem;
+    right: -2rem;
+  }
+
+  .about__container {
+    grid-template-columns: 450px 360px;
+    align-items: center;
+    column-gap: 7rem;
+  }
+  .about__data {
+    order: 1;
+  }
+  .about__data,
+  .about__section__subtitle,
+  .about .section__title {
+    text-align: initial;
+  }
+  .about__title div {
+    column-gap: 1rem;
+    justify-content: initial;
+  }
+  .about__title img {
+    width: 50px;
+  }
+  .about_img {
+    width: 450px;
+  }
+
+  .popular__container {
+    grid-template-columns: repeat(3, 262px);
+    column-gap: 3.5rem;
+    padding-block: 6rem 4rem;
+  }
+  .popular__card {
+    padding: 7.5rem 2rem 2rem;
+    border-radius: 1.5rem;
+  }
+  .popular__img {
+    width: 230px;
+  }
+  .popular__button {
+    bottom: 2rem;
+  }
+
+  .recently__container {
+    grid-template-columns: 350px 480px;
+    align-items: center;
+    column-gap: 7rem;
+    padding-bottom: 2rem;
+  }
+  .recently__data,
+  .recently .section__subtitle,
+  .recently .section__title {
+    text-align: initial;
+  }
+  .recently__data-img {
+    width: 30px;
+    top: 5.5rem;
+    right: 2.5rem;
+  }
+  .recently__img {
+    -width: 480px;
+  }
+
+  .newsletter__content {
+    grid-template-columns: 350px 360px;
+    align-items: center;
+    column-gap: 6rem;
+    padding: 2.5rem 0;
+    border-radius: 4.5rem;
+  }
+  .newsletter__img {
+    position: initial;
+    width: 340px;
+  }
+  .newsletter .section__subtitle,
+  .newsletter .section__title {
+    text-align: initial;
+  }
+  .newsletter .section__title {
+    margin-bottom: 2.5rem;
+  }
+  .newsletter__form {
+    padding: 8px 8px 8px 24px;
+  }
+  .newsletter__button {
+    font-size: var(--normal-font-size);
+  }
+  .newsletter__spinach {
+    width: 40px;
+    right: 5rem;
+    bottom: -2.5rem;
+  }
+  .footer {
+    padding-block: 8rem 3rem;
+  }
+  .footer__container {
+    position: relative;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+  .footer__content {
+    column-gap: 4rem;
+  }
+  .footer__title,
+  .footer_description,
+  .footer_link,
+  footer_information {
+    font-size: var(--biggest-font-size);
+  }
+  .footer__social-link {
+    font-size: 1.5rem;
+  }
+  .footer__info {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 8.5rem;
+  }
+  .footer__copy {
+    order: -1;
+  }
+  .footer__spinach {
+    bottom: -3rem;
+    left: 6rem;
+  }
+  .footer__onion {
+    right: 1rem;
+  }
+
+  .scrollup {
+    right: 3rem;
+  }
+}
+
+@media screen and (min-width: 1064px) {
+  .container {
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .home__leaf-1 {
+    width: 150px;
+    top: 5rem;
+  }
+  .home__leaf-2 {
+    width: 180px;
+    top: -4rem;
+  }
+
+  .about__leaf {
+    width: 200px;
+    bottom: 3rem;
+  }
+
+  .recently__leaf-1 {
+    width: 150px;
+    top: 19rem;
+  }
+  .recently__leaf-2 {
+    width: 100px;
+    bottom: 15rem;
+  }
+
+  .footer__leaf {
+    right: 0;
+    left: 0;
+    bottom: -15rem;
+    margin: 0 auto;
+  }
+}
