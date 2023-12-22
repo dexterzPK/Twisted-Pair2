@@ -10,8 +10,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const mongoDBUrl = "mongodb://127.0.0.1:27017/sushiDB";
 const port = 4000;
 
+app.get('/',(req,res)=>{
+    res.send("Dishes")
+})
+
+app.get('/About',(req,res)=>{
+    res.send("About")
+})
+
 mongoose
-  .connect(mongoDBUrl, { useNewUrlParser: true })
+  .connect(mongoDBUrl)
   .then(() => {
     console.log("Connected to the data-base");
     app.listen(port, () => {
